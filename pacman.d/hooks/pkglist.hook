@@ -6,4 +6,4 @@ Target = *
 
 [Action]
 When = PostTransaction
-Exec = /bin/sh -c '/usr/bin/pacman -Qe > /home/tninomiya/dotfiles/pacman.d/pkglist.txt'
+Exec = /bin/sh -c "/usr/bin/pacman -Qe > /home/tninomiya/dotfiles/pacman.d/pkglist.`date "+%Y%m%d_%H%M%S"`.txt"
