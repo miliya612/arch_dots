@@ -29,6 +29,7 @@ autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
@@ -36,6 +37,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
 
 Plug 'Yggdroot/indentLine'
 call plug#end()
@@ -105,12 +107,15 @@ endfunction
 
 " nerdtree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-j> :NERDTreeFind<CR>
 " auto start
-autocmd VimEnter * execute 'NERDTree'
+autocmd vimenter * NERDTree
 " auto close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " hidden file
 let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " vim-go
 set autowrite
