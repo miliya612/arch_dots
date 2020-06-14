@@ -186,7 +186,7 @@ font:
 
 # Colors
 colors:
-  # Hybrid
+  # Customized Hybrid
   #primary:
   #  background: '0x434c51'
   #  foreground: '0xa5a8a6'
@@ -208,6 +208,29 @@ colors:
   #  magenta: '0xbfa5c7'
   #  cyan:    '0x9fc9c3'
   #  white:   '0xfcf7e2'
+
+  # Colors (Hybrid)
+  primary:
+    background: '#27292c'
+    foreground: '#d0d2d1'
+  normal:
+    black:   '#35383b'
+    red:     '#b05655'
+    green:   '#769972'
+    yellow:  '#e1a574'
+    blue:    '#7693ac'
+    magenta: '#977ba0'
+    cyan:    '#749e99'
+    white:   '#848b92'
+  bright:
+    black:   '#484c52'
+    red:     '#d27c7b'
+    green:   '#dffebe'
+    yellow:  '#f0d189'
+    blue:    '#96b1c9'
+    magenta: '#bfa5c7'
+    cyan:    '#9fc9c3'
+    white:   '#fcf7e2'
 
 #  # Iceberg
 #  primary:
@@ -233,27 +256,27 @@ colors:
 #    white:   '0xd2d4de'
 
   # custom
-  primary:
-    background: '0x484b4a'
-    foreground: '0xdcdcdc'
-  normal:
-    black:   '0x3f3f3f'
-    red:     '0x705050'
-    green:   '0x60b48a'
-    yellow:  '0xdfaf8f'
-    blue:    '0x9ab8d7'
-    magenta: '0xdc8cc3'
-    cyan:    '0x8cd0d3'
-    white:   '0xdcdcdc'
-  bright:
-    black:   '0x709080'
-    red:     '0xdca3a3'
-    green:   '0x72d5a3'
-    yellow:  '0xf0dfaf'
-    blue:    '0x94bff3'
-    magenta: '0xec93d3'
-    cyan:    '0x93e0e3'
-    white:   '0xffffff'
+  #primary:
+  #  background: '0x484b4a'
+  #  foreground: '0xdcdcdc'
+  #normal:
+  #  black:   '0x3f3f3f'
+  #  red:     '0x705050'
+  #  green:   '0x60b48a'
+  #  yellow:  '0xdfaf8f'
+  #  blue:    '0x9ab8d7'
+  #  magenta: '0xdc8cc3'
+  #  cyan:    '0x8cd0d3'
+  #  white:   '0xdcdcdc'
+  #bright:
+  #  black:   '0x709080'
+  #  red:     '0xdca3a3'
+  #  green:   '0x72d5a3'
+  #  yellow:  '0xf0dfaf'
+  #  blue:    '0x94bff3'
+  #  magenta: '0xec93d3'
+  #  cyan:    '0x93e0e3'
+  #  white:   '0xffffff'
 
  
 
