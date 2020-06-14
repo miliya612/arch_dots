@@ -61,6 +61,42 @@ fi
 zplug load –verbose
 
 export $(dbus-launch)
+fpath=($HOME/.zsh/anyframe(N-/) $fpath)
+autoload -Uz anyframe-init
+anyframe-init
+
+## よく移動するディレクトリ一覧をインクリメントサーチ & 移動
+bindkey '^@' anyframe-widget-cdr
+## bash history一覧インクリメントサーチ & 実行
+bindkey '^r' anyframe-widget-execute-history
+## branch一覧をインクリメントサーチ & checkout
+bindkey '^b' anyframe-widget-checkout-git-branch
+## プロセス一覧をインクリメントサーチ & kill
+bindkey '^xk' anyframe-widget-kill
+## ghqでcloneしたリポジトリ一覧をインクリメントサーチ
+bindkey '^g' anyframe-widget-cd-ghq-repository
+
+autoload -U +X compinit && compinit
+
+function peco-ssh () {
+  local selected_host=$(awk '
+  tolower($1)=="host" {
+    for (i=2; i<=NF; i++) {
+      if ($i !~ "[*?]") {
+        print $i
+      }
+    }
+  }
+  ' ~/.ssh/config | sort | peco --query "$LBUFFER")
+  if [ -n "$selected_host" ]; then
+    BUFFER="ssh ${selected_host}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-ssh
+bindkey '^h' peco-ssh
+
 
 source ~/.zprofile
 source <(kubectl completion zsh)
