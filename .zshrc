@@ -25,6 +25,7 @@ setopt correct
 
 export GOPATH='/home/tninomiya/go'
 export PATH="${GOPATH}/bin:$PATH"
+export PATH="${HOME}/.cargo/bin:$PATH"
 
 # spaceship prompt
 SPACESHIP_GOLANG_SHOW=true
